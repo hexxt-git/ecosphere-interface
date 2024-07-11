@@ -18,7 +18,19 @@
 			});
 		});
 	});
+
+	let banner = true;
+	setTimeout(() => (banner = false), 10000);
 </script>
+
+<div
+	class="fixed top-0 left-o w-full h-14 bg-primary-foreground/50 backdrop-blur-sm flex items-center justify-center border-b transition-all duration-300 gap-3 cursor-pointer"
+	style="opacity: {banner ? '1' : '0'};"
+	on:click={() => (banner = false)}
+>
+	the website you are currently viewing is only an interface, a fullstack version does exist
+	<span class="border rounded-full w-6 h-6 font-mono text-center">x</span>
+</div>
 
 <head>
 	<title>EcoSphere</title>
@@ -26,7 +38,7 @@
 
 <Toaster />
 <ModeWatcher />
-<body class="{$t('style.orientation') == 'row' ? 'ltr' : 'rtl'}">
+<body class={$t('style.orientation') == 'row' ? 'ltr' : 'rtl'}>
 	<slot />
 </body>
 
