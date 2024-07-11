@@ -1,0 +1,41 @@
+.docs {
+	main {
+		padding: 50px 20px;
+		width: 80vw;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	@media screen and (max-width: 800px) {
+		main {
+			width: auto;
+		}
+	}
+	.title {
+		display: block;
+		width: fit-content;
+		color: hsl(var(--foreground));
+		font-size: 2.25em;
+		padding: 0 100px 0 0;
+		/* text-decoration: underline hsl(var(--primary)); */
+	}
+	.title span {
+		color: hsl(var(--primary));
+	}
+	h2 {
+		font-size: 1.5em;
+		margin-left: 10px;
+	}
+	hr {
+		margin: 10px 0;
+	}
+	p {
+		text-align: justify;
+	}
+	li {
+		margin-left: 10px;
+	}
+	li * {
+		display: inline;
+		margin-left: 5px;
+	}
+}
