@@ -76,7 +76,7 @@
 					>
 				</a>
 				<a href="/signup">
-					<Button class="text-xl rounded-[1000px] py-6 px-10 shadow-lg">{$t('signup')}</Button>
+					<Button class="text-xl text-white rounded-[1000px] py-6 px-10 shadow-lg">{$t('signup')}</Button>
 				</a>
 			</div>
 		</div>

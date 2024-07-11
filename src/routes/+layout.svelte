@@ -25,7 +25,7 @@
 
 <div
 	class="fixed top-0 left-o w-full h-14 bg-primary-foreground/50 backdrop-blur-sm flex items-center justify-center border-b transition-all duration-300 gap-3 cursor-pointer"
-	style="opacity: {banner ? '1' : '0'};"
+	style="opacity: {banner ? '1' : '0'}; pointer-events: {banner ? 'all' : 'none'}"
 	on:click={() => (banner = false)}
 >
 	the website you are currently viewing is only an interface, a fullstack version does exist
