@@ -59,3 +59,48 @@
 		@apply bg-background text-foreground -z-20 relative;
 	}
 }
+
+.primary-gradient-text {
+	background: linear-gradient(40deg, #3aa021, #a2e79b);
+	background-clip: text;
+	color: transparent;
+}
+.dark .primary-gradient-text {
+	background: linear-gradient(40deg, #29862d, #baf8ae);
+	background-clip: text;
+	color: transparent;
+}
+.love-gradient-text {
+	background: linear-gradient(40deg, #db4b9a, #df558e);
+	background-clip: text;
+	color: transparent;
+}
+.dark .love-gradient-text {
+	background: linear-gradient(40deg, #c42756, #d63d7d);
+	background-clip: text;
+	color: transparent;
+}
+.text-gradient-text {
+	background: linear-gradient(30deg, #080808ff, #222222 60%);
+	background-clip: text;
+	color: transparent;
+}
+.dark .text-gradient-text {
+	background: linear-gradient(30deg, #e7e7e7ca, #ffffff 40%);
+	background-clip: text;
+	color: transparent;
+}
+.glow {
+	position: absolute;
+	top: -80px;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: radial-gradient(circle, rgba(212, 240, 175, 0.267) 0%, #fff0 60%);
+	pointer-events: none;
+	animation: glow-animation 8s infinite;
+}
+.glow-container {
+	opacity: 0.1;
+	animation: glow-container-animation 12s infinite ease-in-out;
+}

@@ -1,13 +1,13 @@
 <script>
 	// @ts-nocheck
-	import Button from '$lib/components/ui/button/button.svelte';
-	import * as Sheet from '$lib/components/ui/sheet';
-	import ThemeSelector from '$lib/modules/ThemeSelector.svelte';
+	import { mode } from 'mode-watcher';
+	import { t, locale } from '$lib/i18n';
 	import { AlignJustify } from 'lucide-svelte';
 	import { DeviceMockup } from 'flowbite-svelte';
-	import { mode } from 'mode-watcher';
+	import * as Sheet from '$lib/components/ui/sheet';
 	import Footer from '$lib/modules/Footer.svelte';
-	import { t, locale } from '$lib/i18n';
+	import Button from '$lib/components/ui/button/button.svelte';
+	import ThemeSelector from '$lib/modules/ThemeSelector.svelte';
 	import LanguageSelector from '$lib/modules/LanguageSelector.svelte';
 </script>
 
@@ -59,7 +59,7 @@
 		</div>
 	</nav>
 	<div class="grid md:flex flex-col overflow-hidden" style="grid-template-columns: 2fr 1fr;">
-		<div class="flex flex-col px-12 pt-8 pb-40 md:pb-12 justify-center gap-6">
+		<div class="flex flex-col pl-40 md:pl-8 pt-8 pb-40 md:pb-12 justify-center gap-6">
 			<h1
 				class="text-[6vw] md:text-[5em] mobile:text-[3em] mt-20 md:mt-0 font-title tracking-tight primary-gradient-text"
 				style="line-height: {$locale == 'ar' ? '115%' : '90%'};"
@@ -76,7 +76,8 @@
 					>
 				</a>
 				<a href="/signup">
-					<Button class="text-xl text-white rounded-[1000px] py-6 px-10 shadow-lg">{$t('signup')}</Button>
+					<Button class="text-xl rounded-[1000px] py-6 px-10 shadow-lg text-foreground">{$t('signup')}</Button
+					>
 				</a>
 			</div>
 		</div>
@@ -97,51 +98,6 @@
 <Footer />
 
 <style>
-	.primary-gradient-text {
-		background: linear-gradient(40deg, #3aa021, #a2e79b);
-		background-clip: text;
-		color: transparent;
-	}
-	:global(.dark .primary-gradient-text) {
-		background: linear-gradient(40deg, #29862d, #baf8ae);
-		background-clip: text;
-		color: transparent;
-	}
-	.love-gradient-text {
-		background: linear-gradient(40deg, #db4b9a, #df558e);
-		background-clip: text;
-		color: transparent;
-	}
-	:global(.dark .love-gradient-text) {
-		background: linear-gradient(40deg, #c42756, #d63d7d);
-		background-clip: text;
-		color: transparent;
-	}
-	.text-gradient-text {
-		background: linear-gradient(30deg, #080808ff, #222222 60%);
-		background-clip: text;
-		color: transparent;
-	}
-	:global(.dark .text-gradient-text) {
-		background: linear-gradient(30deg, #e7e7e7ca, #ffffff 40%);
-		background-clip: text;
-		color: transparent;
-	}
-	.glow {
-		position: absolute;
-		top: -80px;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		background: radial-gradient(circle, rgba(212, 240, 175, 0.267) 0%, #fff0 60%);
-		pointer-events: none;
-		animation: glow-animation 8s infinite;
-	}
-	.glow-container {
-		opacity: 0.1;
-		animation: glow-container-animation 12s infinite ease-in-out;
-	}
-
 	@keyframes glow-animation {
 		0% {
 			transform: scale(0.8);

@@ -18,19 +18,7 @@
 			});
 		});
 	});
-
-	let banner = true;
-	setTimeout(() => (banner = false), 10000);
 </script>
-
-<div
-	class="fixed top-0 left-o w-full h-14 bg-primary-foreground/50 backdrop-blur-sm flex items-center justify-center border-b transition-all duration-300 gap-3 cursor-pointer"
-	style="opacity: {banner ? '1' : '0'}; pointer-events: {banner ? 'all' : 'none'}"
-	on:click={() => (banner = false)}
->
-	the website you are currently viewing is only an interface, a fullstack version does exist
-	<span class="border rounded-full w-6 h-6 font-mono text-center">x</span>
-</div>
 
 <head>
 	<title>EcoSphere</title>
@@ -72,6 +60,7 @@
 		inset: 0;
 		background-image: url('/noise.webp');
 		mask-image: radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.3) 10%, black);
+		background-size: 1200px 1200px;
 		opacity: 0.3;
 		z-index: -20;
 	}
